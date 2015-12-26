@@ -1,7 +1,16 @@
 var express = require('express');
 var morgan = require('morgan');
+var mongoose = require('mongoose');
 
 var app = express();
+
+mongoose.connect('mongodb://root:abc123@ds037095.mongolab.com:37095/ecommerce', function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Connected to the database");
+  }
+});
 
 // Middleware
 app.use(morgan('dev'));
