@@ -39,11 +39,11 @@ app.post('/create-user', function(req, res, next) {
 
 
 app.get('/', function(req, res) {
-  res.render('home');
+  res.render('main/home');
 });
 
 app.get('/about', function(req, res) {
-  res.render('about');
+  res.render('main/about');
 });
 
 
